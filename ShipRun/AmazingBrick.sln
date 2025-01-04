@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{3C6BB497-F5DE-29C2-2667-54ABDF273A67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTWebGL", "TTWebGL.csproj", "{B6B7EA71-B711-120C-064D-09AFA38D3755}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTLitJson", "TTLitJson.csproj", "{9FED4C13-D59E-7F09-836E-466707CE7B9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.bytedance.ttsdk-editor", "com.bytedance.ttsdk-editor.csproj", "{FA99B009-5796-2540-0111-EC19CD8B0CBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C6BB497-F5DE-29C2-2667-54ABDF273A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6BB497-F5DE-29C2-2667-54ABDF273A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6BB497-F5DE-29C2-2667-54ABDF273A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6BB497-F5DE-29C2-2667-54ABDF273A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B7EA71-B711-120C-064D-09AFA38D3755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B7EA71-B711-120C-064D-09AFA38D3755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B7EA71-B711-120C-064D-09AFA38D3755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B7EA71-B711-120C-064D-09AFA38D3755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FED4C13-D59E-7F09-836E-466707CE7B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FED4C13-D59E-7F09-836E-466707CE7B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FED4C13-D59E-7F09-836E-466707CE7B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FED4C13-D59E-7F09-836E-466707CE7B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA99B009-5796-2540-0111-EC19CD8B0CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA99B009-5796-2540-0111-EC19CD8B0CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA99B009-5796-2540-0111-EC19CD8B0CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA99B009-5796-2540-0111-EC19CD8B0CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
