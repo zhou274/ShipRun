@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9FED4C13-D59E-7F09-836E-466707CE7B9D}</ProjectGuid>
+    <ProjectGuid>{5553463A-1A86-9DD9-C5E1-31077C75B2EC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>TTLitJson</AssemblyName>
@@ -58,16 +58,16 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\Netstandard15Polyfill.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonMapper.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\Lexer.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonWriter.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\IJsonWrapper.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonReader.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonException.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonMockWrapper.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonData.cs" />
     <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\ParserToken.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonMockWrapper.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonMapper.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonData.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\Lexer.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\IJsonWrapper.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonException.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonReader.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\JsonWriter.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\Netstandard15Polyfill.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\LitJson\TTLitJson.asmdef" />
@@ -453,8 +453,20 @@
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="starksdk_tools">
+      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk.unitytools\Editor\starksdk_tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="bgdt">
+      <HintPath>Assets\Plugins\ByteGame\com.bytedance.bgdt\Editor\bgdt.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ttsdk">
+      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk\ttsdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
@@ -475,18 +487,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="starksdk_tools">
-      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk.unitytools\Editor\starksdk_tools.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="bgdt">
-      <HintPath>Assets\Plugins\ByteGame\com.bytedance.bgdt\Editor\bgdt.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ttsdk">
-      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk\ttsdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3C6BB497-F5DE-29C2-2667-54ABDF273A67}</ProjectGuid>
+    <ProjectGuid>{0B460CFC-C3C5-8ACF-66A2-E938D0CE2F7C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -73,11 +73,11 @@
     <Compile Include="Assets\Boat Game Template\Scripts\ScrollController.cs" />
     <Compile Include="Assets\Boat Game Template\Scripts\LogoScene.cs" />
     <Compile Include="Assets\Boat Game Template\Scripts\Initiate.cs" />
+    <Compile Include="Assets\Boat Game Template\Scripts\CebianlanManager.cs" />
     <Compile Include="Assets\Boat Game Template\Scripts\ChallengeInfo.cs" />
     <Compile Include="Assets\Boat Game Template\Scripts\ParticleKiller.cs" />
     <Compile Include="Assets\Boat Game Template\Scripts\PlatformController.cs" />
     <Compile Include="Assets\Boat Game Template\Scripts\AdController.cs" />
-    <Compile Include="Assets\Boat Game Template\Scripts\CebianlanManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -453,16 +453,16 @@
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ttsdk">
+      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk\ttsdk.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ttsdk">
-      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk\ttsdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -1195,16 +1195,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="TTLitJson.csproj">
-      <Project>{9FED4C13-D59E-7F09-836E-466707CE7B9D}</Project>
-      <Name>TTLitJson</Name>
-    </ProjectReference>
     <ProjectReference Include="TTWebGL.csproj">
-      <Project>{B6B7EA71-B711-120C-064D-09AFA38D3755}</Project>
+      <Project>{26D3DD3E-6C0C-F3BB-A127-77DE84209F39}</Project>
       <Name>TTWebGL</Name>
     </ProjectReference>
+    <ProjectReference Include="TTLitJson.csproj">
+      <Project>{5553463A-1A86-9DD9-C5E1-31077C75B2EC}</Project>
+      <Name>TTLitJson</Name>
+    </ProjectReference>
     <ProjectReference Include="com.bytedance.ttsdk-editor.csproj">
-      <Project>{FA99B009-5796-2540-0111-EC19CD8B0CBB}</Project>
+      <Project>{C7C3F1EF-BBDB-413A-C75E-FC5A26D54A2D}</Project>
       <Name>com.bytedance.ttsdk-editor</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B6B7EA71-B711-120C-064D-09AFA38D3755}</ProjectGuid>
+    <ProjectGuid>{26D3DD3E-6C0C-F3BB-A127-77DE84209F39}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>TTWebGL</AssemblyName>
@@ -58,20 +58,20 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\FileSystem\TTFileSystemManagerDefault.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\Network\TTUDPSocketHandler.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\TTCallbackHandler.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\TTStorageManager.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\Input\Input.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\FileSystem\TTFileSystemManager.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\TTModel.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\TTWebGLInterface.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\AssetBundle\TTAssetBundleExtensions.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\Compatibility\UnityCacheCompatibility.cs" />
     <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\AssetBundle\DownloadHandlerTTAssetBundle.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\FileSystem\TTFileSystemManagerDefault.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\Compatibility\UnityCacheCompatibility.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\Network\TTUDPSocketHandler.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\TTStorageManager.cs" />
     <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\FileSystem\TTFileSystemManagerWebGL.cs" />
-    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\AssetBundle\TTAssetBundleRequest.cs" />
     <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\AssetBundle\TTAssetBundle.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\AssetBundle\TTAssetBundleExtensions.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\AssetBundle\TTAssetBundleRequest.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\TTWebGLInterface.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\TTCallbackHandler.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\TTModel.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\FileSystem\TTFileSystemManager.cs" />
+    <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\Input\Input.cs" />
     <Compile Include="Assets\Plugins\ByteGame\com.bytedance.starksdk\WebGL\Compatibility\UnityWebRequestCompatibility.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -459,8 +459,20 @@
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="starksdk_tools">
+      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk.unitytools\Editor\starksdk_tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="bgdt">
+      <HintPath>Assets\Plugins\ByteGame\com.bytedance.bgdt\Editor\bgdt.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ttsdk">
+      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk\ttsdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
@@ -481,18 +493,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="starksdk_tools">
-      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk.unitytools\Editor\starksdk_tools.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="bgdt">
-      <HintPath>Assets\Plugins\ByteGame\com.bytedance.bgdt\Editor\bgdt.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ttsdk">
-      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk\ttsdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -1022,7 +1022,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="TTLitJson.csproj">
-      <Project>{9FED4C13-D59E-7F09-836E-466707CE7B9D}</Project>
+      <Project>{5553463A-1A86-9DD9-C5E1-31077C75B2EC}</Project>
       <Name>TTLitJson</Name>
     </ProjectReference>
   </ItemGroup>
