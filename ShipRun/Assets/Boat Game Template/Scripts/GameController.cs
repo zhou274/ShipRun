@@ -118,9 +118,8 @@ public class GameController : MonoBehaviour {
             //}
             uiAnimator.SetTrigger("Over");
             overPanel.SetActive(true);
-            ShowInterstitialAd("1lcaf5895d5l1293dc",
+            ShowInterstitialAd("65btqfsm3gi2bcorhg",
             () => {
-                Debug.LogError("--插屏广告完成--");
 
             },
             (it, str) => {
@@ -164,7 +163,7 @@ public class GameController : MonoBehaviour {
     //Revive with gems
     public void ReviveWithGems() {
 
-        ShowVideoAd("192if3b93qo6991ed0",
+        ShowVideoAd("2pn71h3p4omc8khe40",
             (bol) => {
                 if (bol)
                 {
@@ -193,7 +192,7 @@ public class GameController : MonoBehaviour {
     }
     public void AddCoinsONE()
     {
-        ShowVideoAd("192if3b93qo6991ed0",
+        ShowVideoAd("2pn71h3p4omc8khe40",
             (bol) => {
                 if (bol)
                 {
