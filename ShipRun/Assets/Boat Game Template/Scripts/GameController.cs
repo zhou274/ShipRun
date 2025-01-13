@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour {
     public string clickid;
     private StarkAdManager starkAdManager;
 
-
+    public GameObject GameUI;
     // Use this for initialization
     //Enable selected boat at start
 
@@ -66,6 +66,7 @@ public class GameController : MonoBehaviour {
 
         SetControlVisual();
         SwitchAudioVisual();
+        GameUI.SetActive(false);
     }
 	
     //Setup end panel values
@@ -118,6 +119,7 @@ public class GameController : MonoBehaviour {
             //}
             uiAnimator.SetTrigger("Over");
             overPanel.SetActive(true);
+            GameUI.SetActive(false);
             ShowInterstitialAd("65btqfsm3gi2bcorhg",
             () => {
 
@@ -347,7 +349,7 @@ public class GameController : MonoBehaviour {
         {
             scrollController.StartSetup();
         }
-        
+        GameUI.SetActive(true);
     }
 
     //Go to buying scene

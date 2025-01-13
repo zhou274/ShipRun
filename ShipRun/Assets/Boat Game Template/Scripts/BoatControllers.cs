@@ -74,9 +74,15 @@ public class BoatControllers : MonoBehaviour {
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI gemText;
     public TextMeshProUGUI scoreText;
+    private Vector3 detailMove;
 
 
     public bool isContinue=false;
+
+    private JoyStickMove joyStickMove;
+    private static int moveSpeed=10;
+
+    public GameObject GameUI;
     // Use this for initialization setup all the varibales and values
     void Start() {
         Time.timeScale = 1.0f;
@@ -117,8 +123,27 @@ public class BoatControllers : MonoBehaviour {
         if (speedParticle)
             speedParticle.Stop();
         defaultPosition = transform.position.y;
+
+        this.joyStickMove = FindObjectOfType<JoyStickMove>();
+        this.joyStickMove.onMoveStart += this.onMoveStart;
+        this.joyStickMove.onMoving += this.onMoving;
+        this.joyStickMove.onMoveEnd += this.onMoveEnd;
+    }
+    public void onMoveStart()
+    {
+
+    }
+    public void onMoving(Vector2 vector2)
+    {
+        this.detailMove = new Vector3(vector2.x, 0, 0);
+
     }
 
+    public void onMoveEnd()
+    {
+        this.detailMove = Vector2.zero;
+
+    }
     //Start the game
     public void StartTheGame() {
         if (startRipple)
@@ -175,6 +200,7 @@ public class BoatControllers : MonoBehaviour {
 
             return;
         }
+        this.transform.Translate(this.detailMove * Time.deltaTime * moveSpeed, Space.World);
         //Get input based on control type
         switch (controlType) {
             case ControlTypes.Keyboard: horizontalInput = Input.GetAxis("Horizontal"); break;
@@ -195,9 +221,9 @@ public class BoatControllers : MonoBehaviour {
                 rotor.Rotate(Vector3.forward * rotorSpeed);
             }
         }
-        //move boat based on input
-        transform.position += Vector3.right * (turnSpeed * horizontalInput * Time.deltaTime);
-        transform.position = new Vector3(transform.position.x, defaultPosition, transform.position.z);
+        ////move boat based on input
+        //transform.position += Vector3.right * (turnSpeed * horizontalInput * Time.deltaTime);
+        //transform.position = new Vector3(transform.position.x, defaultPosition, transform.position.z);
 
         //control speed an score
         if (!speedManager)
@@ -270,7 +296,7 @@ public class BoatControllers : MonoBehaviour {
             StopCoroutine(ShieldTimer());
             return;
         }
-
+        
         Debug.Log("Over");
 
         AdController.IncrementAdValue();
