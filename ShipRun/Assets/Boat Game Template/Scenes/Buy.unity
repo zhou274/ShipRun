@@ -1325,7 +1325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 428895065}
   - component: {fileID: 428895067}
-  - component: {fileID: 428895066}
+  - component: {fileID: 428895068}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1350,10 +1350,18 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -238.71, y: -74.973}
+  m_AnchoredPosition: {x: -168, y: -74.973}
   m_SizeDelta: {x: -500.535, y: 128.946}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &428895066
+--- !u!222 &428895067
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428895064}
+  m_CullTransparentMesh: 1
+--- !u!114 &428895068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1383,14 +1391,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &428895067
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428895064}
-  m_CullTransparentMesh: 1
 --- !u!1 &452030770
 GameObject:
   m_ObjectHideFlags: 0
@@ -12137,7 +12137,7 @@ MonoBehaviour:
   m_text: "\u9009\u62E9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fbd24315d94a1c442a474a41401a8a02, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: -2723406948196835994, guid: fbd24315d94a1c442a474a41401a8a02, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12156,7 +12156,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -12187,7 +12187,7 @@ MonoBehaviour:
   checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
-  m_isOrthographic: 0
+  m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
   m_verticalMapping: 0

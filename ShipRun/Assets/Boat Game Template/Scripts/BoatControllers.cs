@@ -80,7 +80,7 @@ public class BoatControllers : MonoBehaviour {
     public bool isContinue=false;
 
     private JoyStickMove joyStickMove;
-    private static int moveSpeed=10;
+    private static int moveSpeed=5;
 
     public GameObject GameUI;
     // Use this for initialization setup all the varibales and values
