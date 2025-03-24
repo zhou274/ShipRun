@@ -122,6 +122,7 @@ public class GameController : MonoBehaviour {
             GameUI.SetActive(false);
             ShowInterstitialAd("65btqfsm3gi2bcorhg",
             () => {
+                Debug.LogError("--插屏广告完成--");
 
             },
             (it, str) => {
