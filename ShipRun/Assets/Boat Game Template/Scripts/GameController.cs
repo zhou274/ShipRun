@@ -55,6 +55,8 @@ public class GameController : MonoBehaviour {
     private StarkAdManager starkAdManager;
 
     public GameObject GameUI;
+
+    public GameObject PopPanel;
     // Use this for initialization
     //Enable selected boat at start
 
@@ -68,7 +70,15 @@ public class GameController : MonoBehaviour {
         SwitchAudioVisual();
         GameUI.SetActive(false);
     }
-	
+	public void ShowPopPanel()
+    {
+        PopPanel.SetActive(true);
+    }
+    public void HidePopPanel()
+    {
+        PopPanel.SetActive(false);
+        StartTheGame();
+    }
     //Setup end panel values
     public void EnableDisableEndPanel(string state , float score , int coins){
 
@@ -153,6 +163,61 @@ public class GameController : MonoBehaviour {
     //Add coins
     public void AddCoins() {
         PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) + coins);
+    }
+    public void AddCoinByAD()
+    {
+        ShowVideoAd("1ttr8r2fjkb23kdpbe",
+            (bol) => {
+                if (bol)
+                {
+
+                    PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) + 100);
+
+                    clickid = "";
+                    getClickid();
+                    apiSend("game_addiction", clickid);
+                    apiSend("lt_roi", clickid);
+
+
+                }
+                else
+                {
+                    StarkSDKSpace.AndroidUIManager.ShowToast("观看完整视频才能获取奖励哦！");
+                }
+            },
+            (it, str) => {
+                Debug.LogError("Error->" + str);
+                //AndroidUIManager.ShowToast("广告加载异常，请重新看广告！");
+            });
+        
+    }
+    public void AddCoinByAD2()
+    {
+        ShowVideoAd("1ttr8r2fjkb23kdpbe",
+            (bol) => {
+                if (bol)
+                {
+
+                    PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) + 100);
+                    HidePopPanel();
+
+                    clickid = "";
+                    getClickid();
+                    apiSend("game_addiction", clickid);
+                    apiSend("lt_roi", clickid);
+
+
+                }
+                else
+                {
+                    StarkSDKSpace.AndroidUIManager.ShowToast("观看完整视频才能获取奖励哦！");
+                }
+            },
+            (it, str) => {
+                Debug.LogError("Error->" + str);
+                //AndroidUIManager.ShowToast("广告加载异常，请重新看广告！");
+            });
+
     }
     //Pause
     public void Pause() {
